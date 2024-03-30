@@ -1,11 +1,11 @@
+import { Outlet } from "react-router-dom";
 import Header from "../Header/Header";
-import Outlet from "../Outlet/Outlet";
 
 const Root = () => {
     return (
-        <div>
+        <div className="mb-20">
             <Header></Header>    
-            <Outlet></Outlet>        
+            <Outlet></Outlet>
         </div>
     );
 };
