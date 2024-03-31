@@ -14,14 +14,19 @@ const ArticleDetails = () => {
     const handleReadButton = () => {
         const getReadItemsFromLS = getDataFromStorage("readItems");
         const existReadItems = getReadItemsFromLS.find(id => id === idInt);
+        const getSaveItemsFromLS = getDataFromStorage("saveItems");
+        const existSaveItems = getSaveItemsFromLS.find(id => id === idInt);
         if (!existReadItems) {
-            toast.success('Read completed');
+            if (!existSaveItems) {
+                getDataFromStorage("readItems");
+                saveItemsToStorage("readItems", idInt);
+                toast.success('Read completed');
+            }else{
+                toast.error("This article Saved For Later, so you can read it later from saved articles");
+            }
         } else {
             toast.warning('Already read!');
         }
-
-        getDataFromStorage("readItems");
-        saveItemsToStorage("readItems", idInt);
     }
     const handleSaveButton = () => {
         const getReadItemsFromLS = getDataFromStorage("readItems");
@@ -34,7 +39,7 @@ const ArticleDetails = () => {
                 saveItemsToStorage("saveItems", idInt);
                 toast.success('Saved Successfully');
             } else {
-                toast.error("This article has read already, so no need to save for later");
+                toast.error("This article has Read Already, so no need to Save For Later");
             }
         } else {
             toast.warning('Already saved!');
