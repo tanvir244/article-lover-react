@@ -5,9 +5,11 @@ import DisplayItem from "../DisplayItem/DisplayItem";
 
 const ReadingActivities = () => {
     const articles = useLoaderData();
+    const [showing, setShowing] = useState([]);
     const [displayItem, setDisplayItem] = useState([]);
     const [clickedRead, setClickedRead] = useState(false);
     const [clickedSave, setClickedSave] = useState(false);
+
 
     useEffect(() => {
         handleButton('read');
@@ -22,6 +24,7 @@ const ReadingActivities = () => {
                 readItemsArray.push(findReadStorageItems);
             }
             setDisplayItem(readItemsArray);
+            setShowing(readItemsArray);
             setClickedRead(true);
             setClickedSave(false);
         }
@@ -33,6 +36,7 @@ const ReadingActivities = () => {
                 saveItemsArray.push(findSaveStorageItems);
             }
             setDisplayItem(saveItemsArray);
+            setShowing(saveItemsArray);
             setClickedSave(true);
             setClickedRead(false);
         }
@@ -40,19 +44,19 @@ const ReadingActivities = () => {
 
     const handleSortButton = (filter) => {
         if (filter === "all") {
-            setDisplayItem(displayItem);
+            setShowing(displayItem);
         }
         else if (filter === "history") {
             const historyOnly = displayItem.filter(item => item.category === "History");
-            setDisplayItem(historyOnly);
+            setShowing(historyOnly);
         }
         else if (filter === "biography") {
             const biographyOnly = displayItem.filter(item => item.category === "Biography");
-            setDisplayItem(biographyOnly);
+            setShowing(biographyOnly);
         }
         else if (filter === "politics") {
             const politicsOnly = displayItem.filter(item => item.category === "Politics");
-            setDisplayItem(politicsOnly);
+            setShowing(politicsOnly);
         }
     }
     
@@ -94,7 +98,7 @@ const ReadingActivities = () => {
             </div>
             <div className="grid grid-cols-3 mt-4 gap-4">
                 {
-                    displayItem.map(item => <DisplayItem
+                    showing.map(item => <DisplayItem
                         key={item.id}
                         item={item}
                     ></DisplayItem>)
