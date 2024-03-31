@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import { useLoaderData } from "react-router-dom";
 import { getDataFromStorage } from "../Utility/localStorage";
 import { useEffect, useState } from "react";
@@ -25,7 +24,7 @@ const ReadingActivities = () => {
             setDisplayItem(readItemsArray);
             setClickedRead(true);
             setClickedSave(false);
-        } 
+        }
         else if (trigger === 'save' && !clickedSave) {
             const getSaveItemsFromStorage = getDataFromStorage("saveItems");
             const saveItemsArray = [];
@@ -38,6 +37,25 @@ const ReadingActivities = () => {
             setClickedRead(false);
         }
     }
+
+    const handleSortButton = (filter) => {
+        if (filter === "all") {
+            setDisplayItem(displayItem);
+        }
+        else if (filter === "history") {
+            const historyOnly = displayItem.filter(item => item.category === "History");
+            setDisplayItem(historyOnly);
+        }
+        else if (filter === "biography") {
+            const biographyOnly = displayItem.filter(item => item.category === "Biography");
+            setDisplayItem(biographyOnly);
+        }
+        else if (filter === "politics") {
+            const politicsOnly = displayItem.filter(item => item.category === "Politics");
+            setDisplayItem(politicsOnly);
+        }
+    }
+    
 
     const clickedStyle = {
         backgroundColor: '#2b3440',
@@ -63,9 +81,10 @@ const ReadingActivities = () => {
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn m-1 bg-[#07b151] px-12 text-white font-semibold text-lg">Sort by</div>
                     <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
-                        <li><a>History</a></li>
-                        <li><a>Biography</a></li>
-                        <li><a>Politics</a></li>
+                        <li onClick={() => handleSortButton("all")}><a>All</a></li>
+                        <li onClick={() => handleSortButton("history")}><a>History</a></li>
+                        <li onClick={() => handleSortButton("biography")}><a>Biography</a></li>
+                        <li onClick={() => handleSortButton("politics")}><a>Politics</a></li>
                     </ul>
                 </div>
             </div>
