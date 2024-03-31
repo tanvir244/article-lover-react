@@ -4,9 +4,11 @@ import './index.css'
 import Root from './Components/Root/Root.jsx'
 import {
   createBrowserRouter,
-  RouterProvider,
+  RouterProvider
 } from "react-router-dom";
 import Home from './Components/Home/Home.jsx';
+import ArticleDetails from './Components/Article_details/ArticleDetails.jsx';
+import ReadingActivities from './Components/ReadingActivities/ReadingActivities.jsx';
 
 const router = createBrowserRouter([
   {
@@ -16,6 +18,16 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>
+      },
+      {
+        path: "/article_details/:id",
+        element: <ArticleDetails></ArticleDetails>,
+        loader: () => fetch('/data/articles.json')
+      },
+      {
+        path: "/reading_activities",
+        element: <ReadingActivities></ReadingActivities>,
+        loader: () => fetch('/data/articles.json')
       }
     ]
   },
