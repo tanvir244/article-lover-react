@@ -7,17 +7,15 @@ const Article = ({ article }) => {
 
     return (
         <Link to={`/article_details/${id}`}>
-            <div className="border rounded-xl block h-full">
+            <div className="rounded-xl shadow-2xl flex flex-col h-full">
                 <img className="rounded-t-xl h-[226px] w-full object-cover" src={image} alt="" />
-                <div className="px-4 py-6 space-y-4">
-                    <div className='flex-grow'>
-                        <h3 className="font-bold text-xl">{title}</h3>
-                    </div>
-                    <div>
+                <div className="px-4 py-6 space-y-4 flex flex-col flex-grow">
+                    <h3 className="font-bold text-xl">{title}</h3>
+                    <div className="flex-grow">
                         <p>{short_details}</p>
                     </div>
                     <div className="flex items-center gap-12 font-semibold">
-                        <p>{category}</p>
+                    <p className="font-bold flex items-center gap-2"><span className="text-xl">#</span> {category}</p>
                         <p className='flex items-center gap-2'><span><MdOutlineWatchLater /></span> {publishing_time}</p>
                     </div>
                 </div>

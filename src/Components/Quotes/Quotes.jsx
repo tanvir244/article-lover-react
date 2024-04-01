@@ -12,7 +12,7 @@ const Quotes = () => {
 
     return (
         <div className="w-[92%] md:max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
                 {
                     quotes.map((quote, index) => <div
                         key={index}
