@@ -9,6 +9,7 @@ import {
 import Home from './Components/Home/Home.jsx';
 import ArticleDetails from './Components/Article_details/ArticleDetails.jsx';
 import ReadingActivities from './Components/ReadingActivities/ReadingActivities.jsx';
+import Quotes from './Components/Quotes/Quotes.jsx';
 
 const router = createBrowserRouter([
   {
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
         path: "/reading_activities",
         element: <ReadingActivities></ReadingActivities>,
         loader: () => fetch('/data/articles.json')
+      },
+      {
+        path: "/famous_quotes",
+        element: <Quotes></Quotes>
       }
     ]
   },

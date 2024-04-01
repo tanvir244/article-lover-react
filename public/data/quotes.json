@@ -1,0 +1,67 @@
+[
+    {
+        "img" : "/images/01-unsplash.png",
+        "quote": "অনন্ত মহাকালে মোর যাত্রা অসীম মহাকাশের অন্তে",
+        "name": "শহীদ আবরার ফাহাদ"
+    },
+    {
+        "img" : "/images/02-unsplash.png",
+        "quote": "If it important to you, you'll find a way; if not you'll find an excuess",
+        "name": "Quote"
+    },
+    {
+        "img" : "/images/10-unsplash.png",
+        "quote": "If you are not failling that means you are not trying enough",
+        "name": "Allison Anderson"
+    },
+    {
+        "img" : "/images/03-Unsplash.png",
+        "quote": "যে নদীর গভীরতা বেশি, তার বয়ে যাওয়ার শব্দ কম",
+        "name": "জন লিভগেট"
+    },
+    {
+        "img" : "/images/08-Unsplash.png",
+        "quote": "আমাকে শিক্ষিত মা দাও, আমি তোমাকে শিক্ষিত জাতি দিবো",
+        "name": "নেপোলিয়ন বোনাপার্ট"
+    },
+    {
+        "img" : "/images/04-unsplash.png",
+        "quote": "যুদ্ধের সবচেয়ে সেরা কৌশল হল, লড়াই করা ছাড়াই শত্রুকে পরাজিত করতে পারা",
+        "name": "সান জু"
+    },
+    {
+        "img" : "/images/05-unsplash.png",
+        "quote": "ভালো মানুষ খুব ধীরে ‘না’ বলে। বুদ্ধিমান মানুষ চট করে ‘না’ বলতে পারে",
+        "name": "প্রাচীন গ্রীক প্রবাদ"
+    },
+    {
+        "img" : "/images/08-Unsplash.png",
+        "quote": "সম্পন্ন করার আগে সবকিছুই অসম্ভব মনে হয়",
+        "name": "নেলসন ম্যান্ডেলা"
+    },
+    {
+        "img" : "/images/09-unsplash.png",
+        "quote": "অন্ধরা দেখতে না পেলেও আলো আলোই থাকে, সে অন্ধকার হয়ে যায় না",
+        "name": "অস্ট্রিয়ান প্রবাদ"
+    },
+    {
+        "img" : "/images/10-unsplash.png",
+        "quote": "গোপন কথা তোমার গোলাম। ফাঁস করে দিলে তুমি তার গোলাম",
+        "name": "আরবি প্রবাদ"
+    },
+    {
+        "img" : "/images/05-unsplash.png",
+        "quote": "প্রয়োজন আইনের তোয়াক্কা করে না",
+        "name": "বেন্জ্ঞামিন ফ্রাঙ্কলিন"
+    },
+    {
+        "img" : "/images/13-unsplash.png",
+        "quote": "অতীত নিয়ে সবসময়ে পড়ে থাকলে তোমার এক চোখ অন্ধ; অতীতকে ভুলে গেলে তোমার দুই চোখই অন্ধ",
+        "name": "রাশিয়ান প্রবাদ "
+    },
+    {
+        "img" : "/images/04-unsplash.png",
+        "quote": "ব্যার্থতা আসলে নতুন করে শুরু করার আরেকটা দারুন সুযোগ, এবার শুধু তোমাকে আরেকটু বেশি বুদ্ধি খাটাতে হবে ",
+        "name": "হেনরি ফোর্ড"
+    }
+]
