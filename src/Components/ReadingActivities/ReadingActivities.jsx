@@ -77,7 +77,7 @@ const ReadingActivities = () => {
                 backgroundRepeat: 'no-repeat',
                 backgroundSize: 'cover'
             }}
-                className="h-[30vh] rounded-xl"
+                className="h-[30vh] rounded-xl text-center"
             >
                 <h3 className="flex justify-center h-full items-center text-5xl text-white font-bold font-dm-serif">Reading Activities</h3>
             </div>
@@ -96,7 +96,7 @@ const ReadingActivities = () => {
                 <button onClick={() => handleButton('read')} className="btn btn-ghos text-base font-semibold rounded-xl" style={clickedRead ? clickedStyle : unClickedStyle}>Already Read</button>
                 <button onClick={() => handleButton('save')} className="btn btn-ghos text-base font-semibold rounded-xl" style={clickedSave ? clickedStyle : unClickedStyle}>Save for later</button>
             </div>
-            <div className="grid grid-cols-3 mt-4 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-4 gap-4">
                 {
                     showing.map(item => <DisplayItem
                         key={item.id}

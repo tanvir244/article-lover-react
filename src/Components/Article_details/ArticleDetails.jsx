@@ -21,7 +21,7 @@ const ArticleDetails = () => {
                 getDataFromStorage("readItems");
                 saveItemsToStorage("readItems", idInt);
                 toast.success('Read completed');
-            }else{
+            } else {
                 toast.error("This article Saved For Later, so you can read it later from saved articles");
             }
         } else {
@@ -47,25 +47,27 @@ const ArticleDetails = () => {
     }
 
     return (
-        <div className="w-[92%] md:max-w-6xl mx-auto py-12 px-8 shadow-[0_0_8px_0_rgba(0,0,0,.15)] rounded-2xl">
-            <div className="w-[90%] mx-auto">
+        <div className="w-[92%] md:max-w-6xl mx-auto py-8 px-4 md:py-12 md:px-8 shadow-[0_0_8px_0_rgba(0,0,0,.15)] rounded-2xl">
+            <div className="w-full md:w-[90%] mx-auto">
                 <h1 className="text-3xl font-bold">{article.title}</h1>
-                <div className="flex gap-16 items-center mt-6 mb-4 w-[96%] mx-auto">
+                <div className="md:flex gap-2 md:gap-16 items-center mt-6 mb-4 w-[100%] mx-auto">
                     <div className="flex items-center gap-4">
                         <img className="h-[50px] w-[50px] rounded-full" src={author_img} alt="" />
                         <p className="font-bold">{author}</p>
                     </div>
-                    <p className="text-[#757575] font-medium"><span className="text-xl font-bold">#</span> {category}</p>
-                    <p className="text-[#757575] font-medium flex items-center gap-2"><span className="text-xl font-bold"><MdOutlineWatchLater /></span> {publishing_time}</p>
+                    <div className="flex gap-4 mt-2 md:flex-row md:mt-0 md:gap-16">
+                        <p className="text-[#757575] font-medium"><span className="text-xl font-bold">#</span> {category}</p>
+                        <p className="text-[#757575] font-medium flex items-center gap-2"><span className="text-xl font-bold"><MdOutlineWatchLater /></span> {publishing_time}</p>
+                    </div>
                 </div>
-                <img className="h-[80vh] w-full rounded-2xl" src={image} alt="" />
+                <img className="md:h-[80vh] w-full rounded-2xl object-cover" src={image} alt="" />
                 <div className="space-y-10 mt-12">
                     <p>{details_1}</p>
                     <p>{details_2}</p>
                     <p>{details_3}</p>
                     <div className="flex justify-end gap-4">
-                        <button onClick={handleReadButton} className="bg-[#2fbbb3] py-3 px-12 text-white text-lg font-semibold rounded-xl">Already Read</button>
-                        <button onClick={handleSaveButton} className="bg-[#07b151] py-3 px-12 text-white text-lg font-semibold rounded-xl">Save for later</button>
+                        <button onClick={handleReadButton} className="bg-[#2fbbb3] py-1 px-4 md:py-3 md:px-12 text-white md:text-lg font-semibold rounded-xl">Already Read</button>
+                        <button onClick={handleSaveButton} className="bg-[#07b151] py-1 px-4 md:py-3 md:px-12 text-white md:text-lg font-semibold rounded-xl">Save for later</button>
                     </div>
                 </div>
             </div>
